@@ -4,6 +4,8 @@
 
 ### Splash Screen
 When the app first launches, this screen appears:
+
+
 <img src="https://github.com/jumaallan/AndelaMedManager/blob/master/screenshots/andela-login-account.png" width="280"/> 
 
 ### OnBoarding
