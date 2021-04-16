@@ -1,0 +1,54 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-slides pager="true">
+    <ion-slide class="ion-padding">
+      <img height="60%"  src="../../assets/s1.svg" >
+
+      <div class="slider-text">
+        <h2>Save Easily!</h2>
+
+        <p>
+         The app lets you add medicine name, its description, the quantity you take and at what intervals, the date you start dosage and the date you complete dosage.
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="finishAppOnboarding()">SKIP</ion-button>
+        <ion-button color="primary" fill="clear" (click)="next()">SWIPE NEXT</ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <img height="60%"  src="../../assets/s2.svg" >
+
+      <div class="slider-text">
+        <h2>Easy to follow!</h2>
+
+        <p>
+         The app then displays the medicine you are to take on a daily basis in a beautifully styled format.
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="finishAppOnboarding()">SKIP</ion-button>
+        <ion-button color="primary" fill="clear" (click)="next()">SWIPE NEXT</ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <img src="../../assets/s3.svg" >
+
+      <div class="slider-text">
+        <h2>Get Notified!</h2>
+
+        <p>
+         When it is time to take your medicine, the app will remind you to do so even when you are logged out.
+        </p>
+      </div>
+      <ion-button color="primary" (click)="finishAppOnboarding()">GET STARTED</ion-button>
+     
+    </ion-slide>
+  </ion-slides>
+  
+</ion-content>

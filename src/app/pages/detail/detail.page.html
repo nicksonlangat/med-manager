@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">
+      MEDICINE DETAILS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-3">
+          <h4>{{today|date: 'fullDate'}}</h4>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-1">
+          <h3>{{item.Name|uppercase}}</h3>
+          <h6>{{item.Description|titlecase}}</h6>
+          <hr>
+         <p> <strong>FREQUENCY:</strong> {{item.Interval}} times/day</p>
+         <p> <strong>DOSE:</strong> {{item.Quantity}}</p>
+         <p> <strong>FROM:</strong> {{item.Start|date}}</p>
+         <p> <strong>TO:</strong> {{item.Finish|date}}</p>
+         <small>DOSAGE TIMES</small>
+         <table class="table table-bordered">
+          
+          <thead>
+            <tr>
+              <!-- <th scope="col">#</th> -->
+              <th  ><ion-icon name="time-sharp"></ion-icon>-1</th>
+              <th  ><ion-icon name="time-sharp"></ion-icon>-2</th>
+              <th  ><ion-icon name="time-sharp"></ion-icon>-3</th>
+            </tr>
+          </thead>
+          <thead>
+        </thead>
+          <tbody>
+            <tr>
+              <!-- <th scope="row">1</th> -->
+              <td>8AM</td>
+              <td>12PM</td>
+              <td>7PM</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    <ion-button [routerLink]="['/home']" >home</ion-button>
+    <ion-button color='success' style="float: right; margin-right: 2px;">extend dose</ion-button>
+  </div>
+</ion-content>

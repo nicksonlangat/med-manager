@@ -1,0 +1,78 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-button>
+				<ion-icon name="home"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+
+		<ion-buttons slot="end">
+			<ion-button class="bordered" fill="solid" color="light">
+				<ion-icon color="primary" src="../assets/bag.svg"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+	<ion-item lines="none">
+		<ion-avatar slot="start">
+			<img src="./assets/me.jpeg">
+    </ion-avatar>
+			<ion-label>
+				<p>{{msg|titlecase}},</p>
+				<h4> {{name}} {{lname}}</h4>
+     
+        <ion-button style="float: right; margin-right: 26px;" (click)='logout()' fill='clear' >
+          Log Out</ion-button>
+			</ion-label>
+	</ion-item>
+  <div style="background: #f1f5f8;">
+    <ion-searchbar mode="ios"  [(ngModel)]="filterTerm" placeholder="search medicine"></ion-searchbar>
+   </div>
+  <h2 style="text-align: center; font-weight: 800;">
+    MY DAILY MEDICINE.
+  </h2>
+  <h6 style="text-align: center;">
+   Today is {{today|date: 'fullDate'}}
+  </h6>
+</ion-header>
+<ion-content>
+  <ion-card-content *ngFor='let item of medicineList | filter:filterTerm' style="margin-left: -15px; margin-top: -7px;  margin-bottom: -15px;">
+      <ion-card>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../assets/bag.svg">
+          </ion-avatar>
+          <ion-label>
+            <h2 style="text-transform: uppercase; color: #030b1d;">
+             {{item.Name}}
+            </h2>
+            <h3 style="text-transform: uppercase; color: grey;">{{item.Description}}</h3>
+         
+          </ion-label>
+          <ion-icon  (click)="getItem(item.id)" color='primary' slot="end" name="information-circle-sharp"></ion-icon>
+          <ion-icon (click)="deleteItem(item.id)" color='danger' slot="end" name="trash-sharp"></ion-icon>
+        </ion-item>
+       
+       </ion-card>
+    </ion-card-content>
+    <div>
+      <ion-button  *ngIf ="medicineList.length > 0" style="float: right; margin-right: 26px;" [routerLink]="['/newmed']">
+        Add More 
+      </ion-button>
+    </div>
+    <ion-card *ngIf ="medicineList.length <= 0">
+      <img height="200px" width="400px" src="../assets/em.svg" />
+      <ion-card-header>
+        <ion-card-title style="text-align: center;">
+          No medicine records. Please add them below.
+          <br>
+          <ion-button [routerLink]="['/newmed']">
+            Add Medicine
+          </ion-button>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+     
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

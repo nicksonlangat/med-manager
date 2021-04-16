@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">
+      NEW MEDICINE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <form ngform="listForm" (ngSubmit)="CreateRecord()">
+    <ion-item>
+      <ion-label position="floating">Name:</ion-label>
+      <ion-input name='Name' [(ngModel)]="Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Description:</ion-label>
+      <ion-input name='Description' [(ngModel)]="Description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Dose Interval:</ion-label>
+      <ion-input name='Interval' [(ngModel)]="Interval"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Dose Qty:</ion-label>
+      <ion-input name='Quantity' [(ngModel)]="Quantity"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Start Date:</ion-label>
+      <ion-datetime name='Start' [(ngModel)]="Start" displayFormat="DD-MM-YYYY" pickerFormat="DD-MM-YYYY">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">End Date:</ion-label>
+      <ion-datetime name='Finish' [(ngModel)]="Finish" displayFormat="DD-MM-YYYY" pickerFormat="DD-MM-YYYY">
+      </ion-datetime>
+    </ion-item>
+      <ion-button  (click)="CreateRecord()">
+        <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+        &nbsp;Save Medicine
+      </ion-button>
+      <ion-button  [routerLink]="['/home']" >
+        <ion-icon size="small" slot="icon-only" name="home"></ion-icon>
+        &nbsp;Home
+      </ion-button>
+  </form>
+</ion-content>

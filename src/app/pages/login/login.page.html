@@ -1,0 +1,49 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" [routerLink]="['/home']" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/register">Sign up</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>welcome back</h1>
+    <img src="assets/avatar.png" />
+  </div>
+
+  <form id="form"  #loginform=ngForm>
+    <ion-item class="ion-margin-bottom">
+      <ion-input type="text" name="email" [(ngModel)]="data.email" required type="email" placeholder="Email"></ion-input>
+    </ion-item>
+    
+    <ion-item class="ion-margin-bottom">
+     
+      <ion-input type="password" name='password' placeholder="Password"  [(ngModel)]="data.password" class="form-controll" required></ion-input>
+    </ion-item>
+    
+    <ion-button expand="block" shape="round"  type="submit" id="submit"  [disabled]="!loginform.valid" (click)="submit()">Log In</ion-button>
+
+  
+  </form>
+
+  <!-- <form #loginform=ngForm id="form" >
+        <ion-item class="ion-margin-bottom">
+            <ion-input clearInput name="email" [(ngModel)]="data.email" required type="email" style="color: black; height: 47px;" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+            <ion-input [type]="passwordType" clearOnEdit="false" type="password"  name="password" [(ngModel)]="data.password" style="color: black; height: 47px;" required placeholder="Password">
+            </ion-input>
+        </ion-item>
+           
+                <ion-button class="button-sign-in" (click)="submit()" expand="block" shape="round"  type="submit" id="submit" [disabled]="!loginform.valid">
+                  Log in
+                </ion-button>
+</form> -->
+</ion-content>
