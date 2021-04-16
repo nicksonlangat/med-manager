@@ -12,6 +12,8 @@ When the app first launches, this screen appears:
 ### OnBoarding
 
 On fresh install, a user is taken through a few slides:
+
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/s1.jpg" height="900" width="450"/> <img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/s2.jpg" height="900" width="450"/> <img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/s3.jpg" height="900" width="450"/> 
 ### Registration
 
 A new user is registered here:
