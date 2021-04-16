@@ -1,28 +1,44 @@
-## Med Manager is an app that a patient can use to remind them to take their meducine and keeo a track of their intake.
+Med Manager is an app that a patient can use to remind them to take their meducine and keeo a track of their intake.
 
-# The user journey is described thus:
+The user journey is described thus:
 
 ### Splash Screen
 When the app first launches, this screen appears:
 
 
-<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/spash.jpg" width="300"/> 
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/spash.jpg" width="450"/> 
 
 ### OnBoarding
 On fresh install, a user is taken through a few slides:
 ### Registration
 A new user is registered here:
+
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/sign.jpg" width="450"/> 
 ### Login
 User login page for page authorisations:
+
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/login.jpg" width="450"/> 
 ### Empty Dashboard
 This page is shown to the user if the database holds no record of their user ID:
+
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/nodata.jpg" width="450"/> 
 ### Adding records
 A user is given a form to fill and submit:
+
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/add.jpg" width="450"/> 
 ### Displaying data
 Once the database has some records, the app pulls it from firebase and displays it as such:
+
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/data.jpg" width="450"/> 
 ### Medicine Details
 More in depth info regarding a given medicine can be found here:
+
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/detail.jpg" width="450"/> 
 ### Periodic Notifications
 When the time to take medicine arrives, the app will attempt to show the user a notification on the native navigation bar. This is as shown:
+
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/notif.jpg" width="450"/> 
 ### Deleting a record
 A user can decide to delete a record by confirming as shown:
+
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/delete.jpg" width="450"/> 
