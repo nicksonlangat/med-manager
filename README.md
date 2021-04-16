@@ -6,7 +6,7 @@
 When the app first launches, this screen appears:
 
 
-<img src="https://github.com/jumaallan/AndelaMedManager/blob/master/screenshots/andela-login-account.png" width="280"/> 
+<img src="https://github.com/nicksonlangat/med-manager/blob/master/screenshots/spash.jpg" width="300"/> 
 
 ### OnBoarding
 On fresh install, a user is taken through a few slides:
