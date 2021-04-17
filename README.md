@@ -1,4 +1,4 @@
-Med Manager is an app that a patient can use to remind them to take their meducine and keeo a track of their intake.
+Med Manager is an app that a patient can use to remind them to take their medicine and keep a track of their intake.
 
 The user journey is described thus:
 
